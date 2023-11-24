@@ -34,5 +34,5 @@ Used for managing asynchronous programming tasks, ensuring smooth and responsive
 ### Flows:
  Leveraged for reactive programming, enhancing data flow within the app.
 #### View Binding:
-  Employed for a type-safe and efficient way of interacting with views.
+  Employed for efficient way of interacting with views.
 
