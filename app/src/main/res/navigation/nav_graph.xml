@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userProfileFragment">
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.bostatask.profile.view.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.example.bostatask.album.view.AlbumFragment"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album" >
+        <argument
+            android:name="albumId"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="albumName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_albumFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.bostatask.image.view.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <argument
+            android:name="imageId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+</navigation>
